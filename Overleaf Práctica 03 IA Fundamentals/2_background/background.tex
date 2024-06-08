@@ -1,0 +1,15 @@
+\section{Implementación}
+
+En esta sección se detallará la implementación del código, el cual puede encontrarse en el siguiente \href{https://github.com/rodrigosilupu/TSP-GeneticAlgorithm-Optimization}{enlace}.
+
+El Problema del Viajante (TSP) es un problema clásico en el campo de la optimización combinatoria, donde el objetivo es encontrar la ruta más corta que permita a un viajante visitar todas las ciudades exactamente una vez y regresar al punto de partida. Este problema es NP-difícil, lo que lo hace un candidato ideal para ser abordado mediante Algoritmos Genéticos (GA).
+
+La implementación del GA para el TSP se basa en la clase  \textbf{'GeneticAlgorithmTSP'}, que encapsula los componentes principales del algoritmo. Esta clase se inicializa con una lista de ciudades, el tamaño de la población, el número de generaciones, la tasa de mutación, el método de selección y el método de inicialización de la población. Los componentes del algoritmo son los siguientes:
+
+\begin{itemize}
+\item Inicialización de la Población: La función \textbf{'initialize\_population'} genera la población inicial. En el primer experimento, cada individuo se crea mediante permutaciones aleatorias de las ciudades. En el segundo experimento, se introducen métodos de inicialización adicionales: aleatoria (random), heurística (heuristic) y una combinación de ambas (hybrid).
+\item Cálculo de Aptitud: La función \textbf{'fitness'} calcula la distancia total de un recorrido, sumando las distancias euclidianas entre ciudades consecutivas y cerrando el ciclo al regresar a la ciudad de origen.
+\item Selección: La función \textbf{'select'} elige a los padres para la generación siguiente. Se implementan métodos de selección como la ruleta, el rango y el torneo, con el torneo siendo el método utilizado en el segundo experimento.
+\item Cruce y Mutación: El método \textbf{'crossover'} combina partes de dos padres para generar un nuevo individuo, mientras que la función mutate introduce variaciones aleatorias en los individuos para mantener la diversidad genética.
+\item Ejecución del Algoritmo: El método \textbf{'run'} ejecuta el GA a lo largo de múltiples generaciones. En cada generación, se evalúan las aptitudes de los individuos, se seleccionan padres, se generan nuevos individuos mediante cruce y mutación, y se registra la mejor aptitud alcanzada.
+\end{itemize}

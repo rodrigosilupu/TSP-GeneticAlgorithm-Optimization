@@ -1,0 +1,11 @@
+\section{Discusión}
+A continuación, se presenta un análisis detallado de ambos experimentos, destacando las características y el desempeño de cada método.
+
+\subsection{Experimento 1: Comparación de Métodos de Selección}
+
+A comparación de los modelos ruleta y rango, el método torneo presenta una convergencia más rápida y alcanza una aptitud final más baja en comparación con los métodos de ruleta y rango. Esto puede deberse a que los métodos de selección por ruleta y rango, aunque efectivos en ciertos contextos, pueden ser más susceptibles a problemas de diversidad y fluctuaciones en la aptitud. Por otro lado, el método de torneo, selecciona un subconjunto aleatorio (en este caso, de tamaño 5) y elige el individuo con la mejor aptitud dentro de ese subconjunto. Esto proporciona una presión selectiva controlada, ya que solo los mejores individuos dentro de cada subconjunto tienen la oportunidad de ser seleccionados. 
+
+
+\subsection{Experimento 2: Comparación de Métodos de Inicialización}
+
+Se observa que el método híbrido logra la aptitud más baja, seguido por el heurístico y finalmente el aleatorio.Esto puede deberse a que el método híbrido combina la diversidad introducida por la aleatoriedad con la dirección proporcionada por las heurísticas. En este sentido, el método híbrido puede explotar de manera más efectiva el espacio de búsqueda, logrando una convergencia eficiente y robusta.

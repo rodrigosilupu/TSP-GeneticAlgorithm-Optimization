@@ -1,0 +1,83 @@
+\begin{titlepage}
+
+\center % Center everything on the page
+
+%% All the text parameters should be taken from the start of the main.tex file.
+%% You should only alter stuff here if you want to change the layout
+
+%----------------------------------------------------------------------------------------
+%	LOGO SECTION
+%----------------------------------------------------------------------------------------
+%% Choose one of the following -- a colour or black-and-white logo
+
+\includegraphics[width = 0.9\textwidth]{0_title/Trinity_Main_Logo.jpg}\\[2.0cm] 
+%\includegraphics[width=12cm]{title/black-stacked-trinity.jpg}\\[1cm] 
+
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+\makeatletter
+
+{ \huge \bfseries \color{tcdBlue} \@title}\\[1.0cm] % Title of your document
+ 
+
+%----------------------------------------------------------------------------------------
+%	AUTHOR SECTION
+%----------------------------------------------------------------------------------------
+
+{\Large\@author} \\[2cm] % Your name
+
+
+%----------------------------------------------------------------------------------------
+%	Supervisor SECTION
+%----------------------------------------------------------------------------------------
+% For reports with supervisors
+\ifdefined\supervisor 
+\large Supervisor: \supervisor\\[1.0cm] % Their name
+\fi
+\ifdefined\cosupervisor
+\large Co-supervisor: \cosupervisor\\[2cm] % Their name
+\fi
+
+%% For module assignment reports
+\ifdefined\lecturer 
+\large Lecturer:\\ \lecturer\\[4.0cm] % Their name
+\fi
+
+
+%----------------------------------------------------------------------------------------
+%	DATE SECTION
+%----------------------------------------------------------------------------------------
+\ifdefined\module
+{\large Report submitted for the module of \\ 
+\Large \module \\
+\large on \\
+\Large \inputdate}\\[2cm] % Date, change the \today to a set date if you want to be precise
+\fi
+ 
+%----------------------------------------------------------------------------------------
+%	TYPE OF THESIS SECTION
+%----------------------------------------------------------------------------------------
+\vfill
+
+\ifdefined\statement
+\large \statement \\
+\fi
+
+\vfill % Fill the rest of the page with whitespace
+
+\large \school\\[1.5ex] % Minor heading such as course title
+\ifdefined\department
+\large \department\\[1.5ex] % Minor heading such as course title
+\fi
+\ifdefined\course
+  \ifdefined\studyYear
+  \large \studyYear\ of \course
+  \else
+  \large \course
+  \fi
+\fi
+
+
+\end{titlepage}
