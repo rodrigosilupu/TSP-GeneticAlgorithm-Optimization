@@ -112,7 +112,6 @@ def plot_fitness(histories, output_dir):
     plt.xlabel('Generations')
     plt.ylabel('Fitness')
     plt.legend()
-    plt.title('Fitness over Generations')
     plt.savefig(os.path.join(output_dir, 'fitness_comparison.png'))
     plt.show()
 
@@ -121,7 +120,6 @@ def plot_route(cities, individual, title, output_dir):
     y = [cities[i][1] for i in individual] + [cities[individual[0]][1]]
     plt.figure()
     plt.plot(x, y, marker='o')
-    plt.title(title)
     plt.savefig(os.path.join(output_dir, f"{title.replace(' ', '_').lower()}.png"))
     plt.show()
 
